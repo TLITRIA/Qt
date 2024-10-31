@@ -14,8 +14,8 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
      <widget class="QMdiArea" name="mdiArea"/>
     </item>
    </layout>
@@ -34,6 +34,7 @@
      <string>文件(&amp;F)</string>
     </property>
     <addaction name="action_New"/>
+    <addaction name="action_Dock"/>
    </widget>
    <addaction name="menu_F"/>
   </widget>
@@ -50,6 +51,49 @@
    </attribute>
    <addaction name="action_New"/>
   </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="windowTitle">
+    <string>工具箱</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QFontComboBox" name="fontComboBox"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <action name="action_New">
    <property name="icon">
     <iconset resource="myimages.qrc">
@@ -63,6 +107,17 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_Dock">
+   <property name="text">
+    <string>打开工具箱(&amp;D)</string>
+   </property>
+   <property name="toolTip">
+    <string>打开工具箱</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
    </property>
   </action>
  </widget>

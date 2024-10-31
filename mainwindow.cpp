@@ -60,3 +60,10 @@ void MainWindow::on_action_New_triggered()
     child->show();
 }
 
+
+
+void MainWindow::on_action_Dock_triggered()
+{
+    ui->dockWidget->show();
+}
+
