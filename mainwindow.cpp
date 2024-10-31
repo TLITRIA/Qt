@@ -6,6 +6,7 @@
 #include <QSpinBox>
 #include <QTextEdit>
 #include <QMdiSubWindow>
+#include <QLabel>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -45,6 +46,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->toolBar->addWidget(spinBox);
 
 
+    ui->statusbar->showMessage(tr("欢迎使用多文档编辑器"), 3000);
+    QLabel *permanent = new QLabel(this);
+    permanent->setFrameStyle(QFrame::Box | QFrame::Sunken);
+    permanent->setText("https://tlitria.github.io/");
+    ui->statusbar->addPermanentWidget(permanent);
 }
 
 MainWindow::~MainWindow()
