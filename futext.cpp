@@ -40,6 +40,15 @@ FuText::FuText(QWidget *parent)
     connect(action_font, &QAction::toggled, this, &FuText::setTextFont);
     ui->toolBar->addAction(action_font);
 
+    QAction *action_textTable = new QAction(tr("表格"), this);
+    QAction *action_textList = new QAction(tr("列表"), this);
+    QAction *action_textImage = new QAction(tr("图片"), this);
+    connect(action_textTable, &QAction::triggered, this, &FuText::insertTable);
+    connect(action_textList, &QAction::triggered, this, &FuText::insertList);
+    connect(action_textImage, &QAction::triggered, this, &FuText::insertImage);
+    ui->toolBar->addAction(action_textTable);
+    ui->toolBar->addAction(action_textList);
+    ui->toolBar->addAction(action_textImage);
 
 }
 
@@ -100,4 +109,27 @@ void FuText::setTextFont(bool checked)
     {
         // 如何恢复？
     }
+}
+
+void FuText::insertTable()
+{
+    QTextCursor cursor = ui->textEdit->textCursor();
+    QTextTableFormat format;
+    format.setCellSpacing(2);
+    format.setCellPadding(10);
+    cursor.insertTable(2, 2, format);
+}
+
+void FuText::insertList()
+{
+    QTextListFormat format;
+    format.setStyle(QTextListFormat::ListDecimal);
+    ui->textEdit->textCursor().insertList(format);
+}
+
+void FuText::insertImage()
+{
+    QTextImageFormat format;
+    format.setName(":/image/myimages/new.png");
+    ui->textEdit->textCursor().insertImage(format);
 }
