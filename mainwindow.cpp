@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 
 #include <QActionGroup>
+#include <QToolButton>
+#include <QSpinBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,6 +30,19 @@ MainWindow::MainWindow(QWidget *parent)
     editMenu->addAction(action_L);
     editMenu->addAction(action_R);
     editMenu->addAction(action_C);
+
+
+    QToolButton *toolBtn = new QToolButton(this);
+    toolBtn->setText(tr("颜色"));
+    QMenu *colorMenu = new QMenu(this);
+    colorMenu->addAction(tr("红色"));
+    colorMenu->addAction(tr("绿色"));
+    toolBtn->setMenu(colorMenu);
+    toolBtn->setPopupMode(QToolButton::MenuButtonPopup);
+    ui->toolBar->addWidget(toolBtn);
+    QSpinBox *spinBox = new QSpinBox(this);
+    ui->toolBar->addWidget(spinBox);
+
 
 }
 
