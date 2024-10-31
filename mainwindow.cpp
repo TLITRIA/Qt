@@ -4,7 +4,8 @@
 #include <QActionGroup>
 #include <QToolButton>
 #include <QSpinBox>
-
+#include <QTextEdit>
+#include <QMdiSubWindow>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -50,3 +51,12 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_action_New_triggered()
+{
+    QTextEdit *edit = new QTextEdit(this);
+    QMdiSubWindow *child = ui->mdiArea->addSubWindow(edit);
+    child->setWindowTitle(tr("多文档编辑器子窗口"));
+    child->show();
+}
+
