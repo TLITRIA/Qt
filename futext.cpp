@@ -30,6 +30,17 @@ FuText::FuText(QWidget *parent)
     QAction *action_textFrame = new QAction(tr("框架"), this);
     connect(action_textFrame, &QAction::triggered, this, &FuText::showTextFrame);
     ui->toolBar->addAction(action_textFrame);
+
+    QAction *action_textBlock = new QAction(tr("文本块"), this);
+    connect(action_textBlock, &QAction::triggered, this, &FuText::showTextBlock);
+    ui->toolBar->addAction(action_textBlock);
+
+    QAction *action_font = new QAction(tr("字体"), this);
+    action_font->setCheckable(true);
+    connect(action_font, &QAction::toggled, this, &FuText::setTextFont);
+    ui->toolBar->addAction(action_font);
+
+
 }
 
 FuText::~FuText()
@@ -50,5 +61,43 @@ void FuText::showTextFrame()
             qDebug() << "frame";
         else if(childBlock.isValid())
             qDebug() << "block:" << childBlock.text();
+    }
+}
+
+void FuText::showTextBlock()
+{
+    QTextDocument *document = ui->textEdit->document();
+    QTextBlock block = document->firstBlock();
+    for(int i = 0; i < document->blockCount(); i++)
+    {
+        qDebug() << tr("文本块%1，文本块首行行号：%2，长度：%3，内容为：")
+                        .arg(i).arg(block.firstLineNumber()).arg(block.length())
+                 << block.text();
+        block = block.next();
+    }
+}
+
+void FuText::setTextFont(bool checked)
+{
+    if(checked)
+    {
+        QTextCursor cursor = ui->textEdit->textCursor();
+
+        QTextBlockFormat blockFormat;
+        blockFormat.setAlignment(Qt::AlignCenter);
+        cursor.insertBlock(blockFormat);
+
+        QTextCharFormat charFormat;
+        charFormat.setBackground(Qt::lightGray);
+        charFormat.setForeground(Qt::blue);
+        charFormat.setFont(QFont(tr("宋体"), 12, QFont::Bold, true));
+        charFormat.setFontUnderline(true);
+        cursor.setCharFormat(charFormat);
+
+        cursor.insertText(tr("测试字体"));
+    }
+    else
+    {
+        // 如何恢复？
     }
 }
