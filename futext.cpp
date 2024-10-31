@@ -2,6 +2,8 @@
 #include "ui_futext.h"
 
 #include <QTextFrame>
+#include <QDebug>
+
 FuText::FuText(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::FuText)
@@ -25,9 +27,28 @@ FuText::FuText(QWidget *parent)
     QTextCursor cursor = ui->textEdit->textCursor();    // 获取光标
     cursor.insertFrame(frameFormat);                    // 在光标处插入框架
 
+    QAction *action_textFrame = new QAction(tr("框架"), this);
+    connect(action_textFrame, &QAction::triggered, this, &FuText::showTextFrame);
+    ui->toolBar->addAction(action_textFrame);
 }
 
 FuText::~FuText()
 {
     delete ui;
+}
+
+void FuText::showTextFrame()
+{
+    QTextDocument *document = ui->textEdit->document();
+    QTextFrame *frame = document->rootFrame();
+    QTextFrame::iterator it;
+    for(it = frame->begin(); !(it.atEnd()); ++it)
+    {
+        QTextFrame *childFrame = it.currentFrame();
+        QTextBlock childBlock = it.currentBlock();
+        if(childFrame)
+            qDebug() << "frame";
+        else if(childBlock.isValid())
+            qDebug() << "block:" << childBlock.text();
+    }
 }

@@ -14,7 +14,8 @@ class FuText : public QMainWindow
 public:
     explicit FuText(QWidget *parent = nullptr);
     ~FuText();
-
+private slots:
+    void showTextFrame();
 private:
     Ui::FuText *ui;
 };
