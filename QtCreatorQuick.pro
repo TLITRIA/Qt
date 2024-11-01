@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     futext.cpp \
+    imagedragdrop.cpp \
     main.cpp \
     mainwindow.cpp \
     mydragdrop.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     futext.h \
+    imagedragdrop.h \
     mainwindow.h \
     mydragdrop.h \
     mysyntaxhighlighter.h
 
 FORMS += \
     futext.ui \
+    imagedragdrop.ui \
     mainwindow.ui \
     mydragdrop.ui
 
