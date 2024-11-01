@@ -12,16 +12,19 @@ SOURCES += \
     futext.cpp \
     main.cpp \
     mainwindow.cpp \
+    mydragdrop.cpp \
     mysyntaxhighlighter.cpp
 
 HEADERS += \
     futext.h \
     mainwindow.h \
+    mydragdrop.h \
     mysyntaxhighlighter.h
 
 FORMS += \
     futext.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    mydragdrop.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
