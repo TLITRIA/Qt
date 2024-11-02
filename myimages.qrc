@@ -3,4 +3,7 @@
         <file>myimages/new.png</file>
         <file>myimages/open.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>myimages/logo.png</file>
+    </qresource>
 </RCC>
