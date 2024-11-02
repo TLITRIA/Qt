@@ -17,6 +17,8 @@ public:
     explicit MyEvent(QWidget *parent = nullptr);
     ~MyEvent();
 
+    bool eventFilter(QObject *obj, QEvent *event);
+
 protected:
     void keyPressEvent(QKeyEvent *event);
 

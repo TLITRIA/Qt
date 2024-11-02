@@ -9,6 +9,13 @@ MyLineEdit::MyLineEdit(QWidget *parent):
 
 }
 
+bool MyLineEdit::event(QEvent *event)
+{
+    if(event->type() == QEvent::KeyPress)
+        qDebug() <<  tr("MyLineEvent的event函数");
+    return QLineEdit::event(event);
+}
+
 void MyLineEdit::keyPressEvent(QKeyEvent *event)
 {
     qDebug() << tr("MyLineEdit键盘按下事件");
