@@ -14,6 +14,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mydragdrop.cpp \
+    myevent.cpp \
+    mylineedit.cpp \
     mysyntaxhighlighter.cpp
 
 HEADERS += \
@@ -21,13 +23,16 @@ HEADERS += \
     imagedragdrop.h \
     mainwindow.h \
     mydragdrop.h \
+    myevent.h \
+    mylineedit.h \
     mysyntaxhighlighter.h
 
 FORMS += \
     futext.ui \
     imagedragdrop.ui \
     mainwindow.ui \
-    mydragdrop.ui
+    mydragdrop.ui \
+    myevent.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
