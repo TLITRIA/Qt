@@ -13,6 +13,7 @@ SOURCES += \
     imagedragdrop.cpp \
     main.cpp \
     mainwindow.cpp \
+    myclass.cpp \
     mydialog.cpp \
     mydragdrop.cpp \
     myevent.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     mykeyevent.cpp \
     mylineedit.cpp \
     mymouseevent.cpp \
+    myproperty.cpp \
     mysignalslot.cpp \
     mysignalslot2.cpp \
     mysyntaxhighlighter.cpp \
@@ -29,6 +31,7 @@ HEADERS += \
     futext.h \
     imagedragdrop.h \
     mainwindow.h \
+    myclass.h \
     mydialog.h \
     mydragdrop.h \
     myevent.h \
@@ -36,6 +39,7 @@ HEADERS += \
     mykeyevent.h \
     mylineedit.h \
     mymouseevent.h \
+    myproperty.h \
     mysignalslot.h \
     mysignalslot2.h \
     mysyntaxhighlighter.h \
@@ -51,6 +55,7 @@ FORMS += \
     myeventfilter.ui \
     mykeyevent.ui \
     mymouseevent.ui \
+    myproperty.ui \
     mysignalslot.ui \
     mysignalslot2.ui \
     mytimerevent.ui

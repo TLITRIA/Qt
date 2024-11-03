@@ -9,12 +9,17 @@
 #include "myeventfilter.h"
 #include "mysignalslot.h"
 #include "mysignalslot2.h"
+#include "myproperty.h"
+
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MySignalSlot2 w;
-    w.show();
-    return a.exec();
+    // MySignalSlot2 w;
+    // w.show();
+
+    MyProperty p;
+
+    return 0;
 }
