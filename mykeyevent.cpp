@@ -2,12 +2,19 @@
 #include "ui_mykeyevent.h"
 
 #include <QKeyEvent>
+#include <QDebug>
 
 MyKeyEvent::MyKeyEvent(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::MyKeyEvent)
 {
     ui->setupUi(this);
+
+    setFocus();     // 使主界面获得焦点
+
+    // keyLeft = false;
+    // keyUp = false;
+    // keyMove = false;
 }
 
 MyKeyEvent::~MyKeyEvent()
@@ -17,16 +24,14 @@ MyKeyEvent::~MyKeyEvent()
 
 void MyKeyEvent::keyPressEvent(QKeyEvent *event)
 {
-    if(event->modifiers() == Qt::ControlModifier)   // 是否按下ctrl
-    {
-        if(event->key() == Qt::Key_M)
-            setWindowState(Qt::WindowMaximized); // 窗口最大化
-    }
-    else
-        QWidget::keyPressEvent(event);
+    if(event->key() == Qt::Key_Up)
+        qDebug() << "press:" << event->isAutoRepeat();
 }
 
 void MyKeyEvent::keyReleaseEvent(QKeyEvent *event)
 {
-
+    if(event->key() == Qt::Key_Up){
+        qDebug() << "release:" << event->isAutoRepeat();
+        qDebug() << "up";
+    }
 }

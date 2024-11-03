@@ -19,6 +19,9 @@ protected:
     void keyReleaseEvent(QKeyEvent *event);
 private:
     Ui::MyKeyEvent *ui;
+    // bool keyUp;
+    // bool keyLeft;
+    // bool keyMove;
 };
 
 #endif // MYKEYEVENT_H
