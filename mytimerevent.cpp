@@ -4,6 +4,7 @@
 #include <QTimer>
 #include <QTime>
 #include <QDebug>
+
 MyTimerEvent::MyTimerEvent(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::MyTimerEvent)
@@ -17,6 +18,10 @@ MyTimerEvent::MyTimerEvent(QWidget *parent)
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MyTimerEvent::timerUpdate);
     timer->start(1000);
+
+    srand(QTime(0,0,0).secsTo(QTime::currentTime())); // secsTo两时间点之间的描述设置初始值使得每次启动程序都有不同的值初始化srand
+
+    QTimer::singleShot(10000, this, &QWidget::close); // 一次只运行一次的定时器
 }
 
 MyTimerEvent::~MyTimerEvent()
@@ -40,6 +45,9 @@ void MyTimerEvent::timerUpdate()
     QString text = time.toString("hh:mm");
     if((time.second() % 2) == 0) text[2] = ' '; // 每隔1S闪烁":"
     ui->lcdNumber->display(text);
+
+    int rrand = rand() % 300;
+    ui->lcdNumber->move(rrand, rrand);
 }
 
 
