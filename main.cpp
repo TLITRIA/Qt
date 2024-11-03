@@ -8,12 +8,13 @@
 #include "mytimerevent.h"
 #include "myeventfilter.h"
 #include "mysignalslot.h"
+#include "mysignalslot2.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MySignalSlot w;
+    MySignalSlot2 w;
     w.show();
     return a.exec();
 }

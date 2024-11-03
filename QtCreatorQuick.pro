@@ -21,6 +21,7 @@ SOURCES += \
     mylineedit.cpp \
     mymouseevent.cpp \
     mysignalslot.cpp \
+    mysignalslot2.cpp \
     mysyntaxhighlighter.cpp \
     mytimerevent.cpp
 
@@ -36,6 +37,7 @@ HEADERS += \
     mylineedit.h \
     mymouseevent.h \
     mysignalslot.h \
+    mysignalslot2.h \
     mysyntaxhighlighter.h \
     mytimerevent.h
 
@@ -50,6 +52,7 @@ FORMS += \
     mykeyevent.ui \
     mymouseevent.ui \
     mysignalslot.ui \
+    mysignalslot2.ui \
     mytimerevent.ui
 
 # Default rules for deployment.
