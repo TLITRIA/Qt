@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QLCDNumber" name="lcdNumber">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>50</y>
+     <width>141</width>
+     <height>131</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
