@@ -7,13 +7,13 @@
 #include "mykeyevent.h"
 #include "mytimerevent.h"
 #include "myeventfilter.h"
-
+#include "mysignalslot.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MyEventFilter w;
+    MySignalSlot w;
     w.show();
     return a.exec();
 }

@@ -13,12 +13,14 @@ SOURCES += \
     imagedragdrop.cpp \
     main.cpp \
     mainwindow.cpp \
+    mydialog.cpp \
     mydragdrop.cpp \
     myevent.cpp \
     myeventfilter.cpp \
     mykeyevent.cpp \
     mylineedit.cpp \
     mymouseevent.cpp \
+    mysignalslot.cpp \
     mysyntaxhighlighter.cpp \
     mytimerevent.cpp
 
@@ -26,12 +28,14 @@ HEADERS += \
     futext.h \
     imagedragdrop.h \
     mainwindow.h \
+    mydialog.h \
     mydragdrop.h \
     myevent.h \
     myeventfilter.h \
     mykeyevent.h \
     mylineedit.h \
     mymouseevent.h \
+    mysignalslot.h \
     mysyntaxhighlighter.h \
     mytimerevent.h
 
@@ -39,11 +43,13 @@ FORMS += \
     futext.ui \
     imagedragdrop.ui \
     mainwindow.ui \
+    mydialog.ui \
     mydragdrop.ui \
     myevent.ui \
     myeventfilter.ui \
     mykeyevent.ui \
     mymouseevent.ui \
+    mysignalslot.ui \
     mytimerevent.ui
 
 # Default rules for deployment.
