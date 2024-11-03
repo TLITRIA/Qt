@@ -14,7 +14,7 @@ MySignalSlot2::MySignalSlot2(QWidget *parent)
 }
 
 MySignalSlot2::~MySignalSlot2()
-{
+{//
     delete ui;
 }
 
