@@ -15,6 +15,7 @@ SOURCES += \
     mainwindow.cpp \
     mydragdrop.cpp \
     myevent.cpp \
+    mykeyevent.cpp \
     mylineedit.cpp \
     mymouseevent.cpp \
     mysyntaxhighlighter.cpp
@@ -25,6 +26,7 @@ HEADERS += \
     mainwindow.h \
     mydragdrop.h \
     myevent.h \
+    mykeyevent.h \
     mylineedit.h \
     mymouseevent.h \
     mysyntaxhighlighter.h
@@ -35,6 +37,7 @@ FORMS += \
     mainwindow.ui \
     mydragdrop.ui \
     myevent.ui \
+    mykeyevent.ui \
     mymouseevent.ui
 
 # Default rules for deployment.
