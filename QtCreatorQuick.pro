@@ -13,6 +13,7 @@ SOURCES += \
     imagedragdrop.cpp \
     main.cpp \
     mainwindow.cpp \
+    mybutton.cpp \
     myclass.cpp \
     mydialog.cpp \
     mydragdrop.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
     mykeyevent.cpp \
     mylineedit.cpp \
     mymouseevent.cpp \
+    myownership.cpp \
     myproperty.cpp \
     mysignalslot.cpp \
     mysignalslot2.cpp \
@@ -31,6 +33,7 @@ HEADERS += \
     futext.h \
     imagedragdrop.h \
     mainwindow.h \
+    mybutton.h \
     myclass.h \
     mydialog.h \
     mydragdrop.h \
@@ -39,6 +42,7 @@ HEADERS += \
     mykeyevent.h \
     mylineedit.h \
     mymouseevent.h \
+    myownership.h \
     myproperty.h \
     mysignalslot.h \
     mysignalslot2.h \
@@ -55,6 +59,7 @@ FORMS += \
     myeventfilter.ui \
     mykeyevent.ui \
     mymouseevent.ui \
+    myownership.ui \
     myproperty.ui \
     mysignalslot.ui \
     mysignalslot2.ui \
