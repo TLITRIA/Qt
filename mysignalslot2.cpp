@@ -14,7 +14,7 @@ MySignalSlot2::MySignalSlot2(QWidget *parent)
 }
 
 MySignalSlot2::~MySignalSlot2()
-{//
+{// 信号和槽的高级应用
     delete ui;
 }
 
