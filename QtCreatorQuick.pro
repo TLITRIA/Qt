@@ -15,6 +15,7 @@ SOURCES += \
     mainwindow.cpp \
     mydragdrop.cpp \
     myevent.cpp \
+    myeventfilter.cpp \
     mykeyevent.cpp \
     mylineedit.cpp \
     mymouseevent.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     mainwindow.h \
     mydragdrop.h \
     myevent.h \
+    myeventfilter.h \
     mykeyevent.h \
     mylineedit.h \
     mymouseevent.h \
@@ -39,6 +41,7 @@ FORMS += \
     mainwindow.ui \
     mydragdrop.ui \
     myevent.ui \
+    myeventfilter.ui \
     mykeyevent.ui \
     mymouseevent.ui \
     mytimerevent.ui
