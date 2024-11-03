@@ -18,7 +18,8 @@ SOURCES += \
     mykeyevent.cpp \
     mylineedit.cpp \
     mymouseevent.cpp \
-    mysyntaxhighlighter.cpp
+    mysyntaxhighlighter.cpp \
+    mytimerevent.cpp
 
 HEADERS += \
     futext.h \
@@ -29,7 +30,8 @@ HEADERS += \
     mykeyevent.h \
     mylineedit.h \
     mymouseevent.h \
-    mysyntaxhighlighter.h
+    mysyntaxhighlighter.h \
+    mytimerevent.h
 
 FORMS += \
     futext.ui \
@@ -38,7 +40,8 @@ FORMS += \
     mydragdrop.ui \
     myevent.ui \
     mykeyevent.ui \
-    mymouseevent.ui
+    mymouseevent.ui \
+    mytimerevent.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
