@@ -72,3 +72,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     myimages.qrc
+
+DISTFILES += \
+    README.md
