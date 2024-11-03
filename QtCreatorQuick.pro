@@ -15,6 +15,7 @@ SOURCES += \
     mainwindow.cpp \
     mybutton.cpp \
     myclass.cpp \
+    mycontainers.cpp \
     mydialog.cpp \
     mydragdrop.cpp \
     myevent.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     mainwindow.h \
     mybutton.h \
     myclass.h \
+    mycontainers.h \
     mydialog.h \
     mydragdrop.h \
     myevent.h \

@@ -11,14 +11,16 @@
 #include "mysignalslot2.h"
 #include "myproperty.h"
 #include "myownership.h"
+#include "mycontainers.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MyOwnership w;
-    w.show();
-    return a.exec();
-    // return 0;
+    MyContainers w;
+    w.qmap();
+    // w.show();
+    // return a.exec();
+    return 0;
 }

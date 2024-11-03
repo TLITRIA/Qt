@@ -19,4 +19,13 @@ MOC提供
 
 动态类型转换 qonject_cast() 类型不兼容返回0
 
-The MetaObject System
+The MetaObject System 帮助
+
+## 7.2 容器类
+与STL相比，Qt中的容器类更轻量、安全、易用
+
+### 7.2.1 Qt容器类介绍
+- 顺序容器：QList QLinkedList QVector QStack QQueue
+- 关联容器：QMap QMultiMap QHash QMultiHash QSet 
+    Muliti容器适用一键多值的情况
+- QCache QContiguousCache 缓存存储中对象的高级散列查找
