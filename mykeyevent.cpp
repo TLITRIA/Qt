@@ -12,9 +12,9 @@ MyKeyEvent::MyKeyEvent(QWidget *parent)
 
     setFocus();     // 使主界面获得焦点
 
-    // keyLeft = false;
-    // keyUp = false;
-    // keyMove = false;
+    keyLeft = false;
+    keyUp = false;
+    move = false;
 }
 
 MyKeyEvent::~MyKeyEvent()
@@ -25,13 +25,54 @@ MyKeyEvent::~MyKeyEvent()
 void MyKeyEvent::keyPressEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Up)
-        qDebug() << "press:" << event->isAutoRepeat();
+    {
+        if(event->isAutoRepeat())
+            return;
+        keyUp = true;
+    }
+    else if(event->key() == Qt::Key_Left)
+    {
+        if(event->isAutoRepeat()) return;
+        keyLeft = true;
+    }
 }
 
 void MyKeyEvent::keyReleaseEvent(QKeyEvent *event)
 {
-    if(event->key() == Qt::Key_Up){
-        qDebug() << "release:" << event->isAutoRepeat();
-        qDebug() << "up";
+    if(event->key() == Qt::Key_Up)
+    {
+        if(event->isAutoRepeat()) return;
+        keyUp = false;
+        if(move)
+        {
+            move = false;
+            return;
+        }
+        if(keyLeft)
+        {
+            ui->pushButton->move(30, 80);
+            move = true;
+        } else {
+            ui->pushButton->move(120, 80);
+        }
+    } else if(event->key() == Qt::Key_Left)
+    {
+        if(event->isAutoRepeat()) return;
+        keyLeft = false;
+        if(move)
+        {
+            move = false;
+            return;
+        }
+        if(keyUp)
+        {
+            ui->pushButton->move(30, 80);
+            move = true;
+        } else {
+            ui->pushButton->move(30, 120);
+        }
+    } else if(event->key() == Qt::Key_Down)
+    {
+        ui->pushButton->move(120, 120);
     }
 }
