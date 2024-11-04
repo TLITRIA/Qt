@@ -13,14 +13,14 @@
 #include "myownership.h"
 #include "mycontainers.h"
 #include "mystring.h"
+#include "myvariant.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MyString w;
-    w.find();
+    MyVariant w;
     // w.show();
     // return a.exec();
     return 0;

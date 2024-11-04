@@ -29,7 +29,8 @@ SOURCES += \
     mysignalslot2.cpp \
     mystring.cpp \
     mysyntaxhighlighter.cpp \
-    mytimerevent.cpp
+    mytimerevent.cpp \
+    myvariant.cpp
 
 HEADERS += \
     futext.h \
@@ -51,7 +52,8 @@ HEADERS += \
     mysignalslot2.h \
     mystring.h \
     mysyntaxhighlighter.h \
-    mytimerevent.h
+    mytimerevent.h \
+    myvariant.h
 
 FORMS += \
     futext.ui \
