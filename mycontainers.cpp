@@ -4,6 +4,12 @@
 #include <QMap>
 #include <QMultiMap>
 
+#include <QListIterator>
+#include <QMutableListIterator>
+#include <QMapIterator>
+#include <QMutableMapIterator>
+
+
 MyContainers::MyContainers() {}
 
 void MyContainers::qlist()
@@ -69,4 +75,131 @@ void MyContainers::qmap()
     map3 = map1 + map2; // QMultiMap实现一键多值
     qDebug() << "the values are:" << map3.values("values");
 
+}
+
+void MyContainers::iterator_1()
+{
+    QList<QString> list;
+    list << "A" << "B" << "C" << "D";
+    QListIterator<QString> i(list);
+    qDebug() << "the forwardis :";
+    while(i.hasNext())
+        qDebug() << i.next();
+    qDebug() << "the backwardis :";
+    while(i.hasPrevious())
+        qDebug() << i.previous();
+
+    QMutableListIterator<QString> j(list);
+    j.toBack();
+    while(j.hasPrevious())
+    {
+        QString str = j.previous();
+        if(str == "B")
+            j.remove();
+    }
+    j.insert("Q");
+    j.toBack();
+    if(j.hasPrevious())
+        j.previous() = "N";
+    j.previous();
+    j.setValue("M");
+    j.toFront();
+    qDebug() << "the forward is:";
+    while(j.hasNext())
+        qDebug() << j.next();
+}
+
+void MyContainers::iterator_2()
+{
+    QMap<QString, QString> map;
+    map.insert("Paries", "France");
+    map.insert("Guatemala City", "Guatemala");
+    map.insert("Mexico City", "Mexico");
+    map.insert("Moscow", "Russia");
+    QMapIterator<QString, QString> i(map);
+    while(i.hasNext())
+    {
+        i.next();
+        qDebug() << i.key() << ":" << i.value();
+    }
+    if(i.findPrevious("Mexico"))
+        qDebug() << "find Mexico";
+    QMutableMapIterator<QString, QString> j(map);
+    while(j.hasNext())
+    {
+        if(j.next().key().endsWith("City"))
+            j.remove();
+    }
+    while(j.hasPrevious())
+    {
+        j.previous();
+        qDebug() << j.key() << ":" << j.value();
+    }
+}
+
+void MyContainers::iterator_3()
+{
+    QList<QString> list;
+    list << "A" << "B" << "C" << "D";
+    QList<QString>::iterator i;
+    qDebug() << "the forward is:";
+    for(i = list.begin(); i!=list.end(); i++)
+    {
+        *i = (*i).toLower();
+        qDebug() << *i;
+    }
+    qDebug() << "the backwards is:";
+    while(i != list.begin())
+    {
+        --i;
+        qDebug() << *i;
+    }
+
+    QList<QString>::const_iterator j;
+    qDebug() << "the forward is:";
+    for(j = list.constBegin(); j!=list.constEnd(); ++j)
+    {
+        qDebug() << *j;
+    }
+
+    QMap<QString, int> map;
+    map.insert("one", 1);
+    map.insert("two", 2);
+    map.insert("three", 3);
+    QMap<QString, int>::const_iterator p;
+    qDebug() << "the forward is:";
+    for(p = map.constBegin(); p!=map.constEnd(); ++p)
+    {
+        qDebug() << p.key() << ":" << p.value();
+    }
+}
+
+void MyContainers::myforeach()
+{
+    QList<QString> list;
+    list.insert(0, "A");
+    list.insert(1, "B");
+    list.insert(2, "C");
+    qDebug() << "the list is:";
+    foreach(QString str, list)
+        qDebug() << str;
+
+    QMap<QString, int> map;
+    map.insert("first", 1);
+    map.insert("second", 2);
+    map.insert("third", 3);
+    qDebug() << "the map is:";
+    foreach(QString str, map.keys())
+        qDebug() << str << ":" << map.value(str);
+
+    QMultiMap<QString, int> map2;
+    map2.insert("first", 1);
+    map2.insert("first", 2);
+    map2.insert("first", 3);
+    map2.insert("second", 2);
+    qDebug() << "the map2 is:";
+    QList<QString> keys = map2.uniqueKeys();
+    foreach(QString str, keys)
+        foreach(int i, map2.values(str))
+            qDebug() << str << ":" << i;
 }

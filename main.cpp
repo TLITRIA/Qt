@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MyContainers w;
-    w.qmap();
+    w.myforeach();
     // w.show();
     // return a.exec();
     return 0;

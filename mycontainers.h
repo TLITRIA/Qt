@@ -8,6 +8,10 @@ public:
 
     void qlist();
     void qmap();
+    void iterator_1();
+    void iterator_2();
+    void iterator_3();
+    void myforeach();
 };
 
 #endif // MYCONTAINERS_H
