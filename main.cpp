@@ -12,14 +12,15 @@
 #include "myproperty.h"
 #include "myownership.h"
 #include "mycontainers.h"
+#include "mystring.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MyContainers w;
-    w.myalgorithm();
+    MyString w;
+    w.find();
     // w.show();
     // return a.exec();
     return 0;

@@ -27,6 +27,7 @@ SOURCES += \
     myproperty.cpp \
     mysignalslot.cpp \
     mysignalslot2.cpp \
+    mystring.cpp \
     mysyntaxhighlighter.cpp \
     mytimerevent.cpp
 
@@ -48,6 +49,7 @@ HEADERS += \
     myproperty.h \
     mysignalslot.h \
     mysignalslot2.h \
+    mystring.h \
     mysyntaxhighlighter.h \
     mytimerevent.h
 
