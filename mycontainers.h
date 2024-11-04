@@ -12,6 +12,7 @@ public:
     void iterator_2();
     void iterator_3();
     void myforeach();
+    void myalgorithm();
 };
 
 #endif // MYCONTAINERS_H

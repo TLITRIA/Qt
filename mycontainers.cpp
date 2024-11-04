@@ -9,6 +9,10 @@
 #include <QMapIterator>
 #include <QMutableMapIterator>
 
+#include <QVector>
+#include <QStringList>
+#include <algorithm>
+
 
 MyContainers::MyContainers() {}
 
@@ -202,4 +206,57 @@ void MyContainers::myforeach()
     foreach(QString str, keys)
         foreach(int i, map2.values(str))
             qDebug() << str << ":" << i;
+}
+
+void MyContainers::myalgorithm()
+{
+    QStringList list;
+    list << "one" << "two" << "three";
+
+    qDebug() << "std::copy算法";
+    QVector<QString> vect(3);
+    std::copy(list.begin(), list.end(), vect.begin());
+    qDebug() << vect;
+
+    qDebug() << "\nstd::equal算法";
+    qDebug() << "equal:"
+             << std::equal(list.begin(), list.end(), vect.begin());
+
+    qDebug() << "\nstd::find算法";
+    QList<QString>::iterator i = std::find(list.begin(), list.end(), "two");
+    qDebug() << "find:" << *i;
+
+    qDebug() << "\nstd::fill算法";
+    std::fill(list.begin(), list.end(), "eleven");
+    qDebug() << list;
+
+    qDebug() << "\nstd::count算法";
+    QList<int> list1;
+    list1 << 3 << 3 << 6 << 6 << 6 << 8;
+    qDebug() << "countOf6:" << std::count(list1.begin(), list1.end(), 6);
+
+    qDebug() << "\nstd::lower_bound算法";
+    QList<int>::iterator j = std::lower_bound(list1.begin(), list1.end(), 5);
+    list1.insert(j, 5);
+    qDebug() << list1;
+
+    qDebug() << "\nstd::sort算法";
+    QList<int> list2;
+    list2 << 33 << 12 << 69 << 6 << 12;
+    std::sort(list2.begin(), list2.end()); // 快排
+    qDebug() << list2;
+
+    qDebug() << "\nstd::stable_sort算法";
+    QList<int> list3;
+    list3 << 33 << 12 << 69 << 6 << 12;
+    std::stable_sort(list3.begin(), list3.end()); //
+
+    // qDebug() << "\nstd::greater算法";
+    // qSort(list2.begin(), list2.end(), std::greater<int>());
+
+    qDebug() << "\nstd::swap算法";
+    double pi = 3.14;
+    double e = 2.71;
+    std::swap(pi, e);
+    qDebug() << pi << e;
 }
