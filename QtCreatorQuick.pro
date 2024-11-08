@@ -20,11 +20,13 @@ SOURCES += \
     mydragdrop.cpp \
     myevent.cpp \
     myeventfilter.cpp \
+    myfile.cpp \
     mykeyevent.cpp \
     mylineedit.cpp \
     mymouseevent.cpp \
     myownership.cpp \
     myproperty.cpp \
+    myre.cpp \
     mysignalslot.cpp \
     mysignalslot2.cpp \
     mystring.cpp \
@@ -43,11 +45,13 @@ HEADERS += \
     mydragdrop.h \
     myevent.h \
     myeventfilter.h \
+    myfile.h \
     mykeyevent.h \
     mylineedit.h \
     mymouseevent.h \
     myownership.h \
     myproperty.h \
+    myre.h \
     mysignalslot.h \
     mysignalslot2.h \
     mystring.h \
