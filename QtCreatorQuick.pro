@@ -1,4 +1,4 @@
-QT       += core gui core5compat
+QT       += core gui core5compat network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -32,6 +32,8 @@ SOURCES += \
     QtCreatorQuickStart/mysyntaxhighlighter.cpp \
     QtCreatorQuickStart/mytimerevent.cpp \
     QtCreatorQuickStart/myvariant.cpp \
+    QtCreatorQuickStart/mywebengine.cpp \
+    Spider/spider.cpp \
     Spider/spiderwidget.cpp \
     main.cpp \
 
@@ -60,6 +62,8 @@ HEADERS += \
     QtCreatorQuickStart/mysyntaxhighlighter.h \
     QtCreatorQuickStart/mytimerevent.h \
     QtCreatorQuickStart/myvariant.h \
+    QtCreatorQuickStart/mywebengine.h \
+    Spider/spider.h \
     Spider/spiderwidget.h \
 
 
@@ -78,6 +82,7 @@ FORMS += \
     QtCreatorQuickStart/mysignalslot.ui \
     QtCreatorQuickStart/mysignalslot2.ui \
     QtCreatorQuickStart/mytimerevent.ui \
+    QtCreatorQuickStart/mywebengine.ui \
     Spider/spiderwidget.ui \
 
 # Default rules for deployment.

@@ -3,6 +3,10 @@
 
 #include <QWidget>
 
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+
 namespace Ui {
 class SpiderWidget;
 }
@@ -15,7 +19,14 @@ public:
     explicit SpiderWidget(QWidget *parent = nullptr);
     ~SpiderWidget();
 
+public slots:
+    void readFinishedSlot();
 private:
+    void getPictureLinkFromHTML(const QString& strData);
+
+    QNetworkAccessManager* mManager;
+    QString qsContent;
+    QStringList mDownloadList;
     Ui::SpiderWidget *ui;
 };
 
