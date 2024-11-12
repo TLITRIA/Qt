@@ -98,4 +98,5 @@ RESOURCES += \
     myimages.qrc
 
 DISTFILES += \
+    .gitignore \
     README.md

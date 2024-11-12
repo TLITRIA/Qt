@@ -1,6 +1,7 @@
 *.idx
 *.stach
-
+*.html
+干员一览 - PRTS - 玩家共同构筑的明日方舟中文Wiki_files
 # C++ objects and libs
 *.slo
 *.lo
