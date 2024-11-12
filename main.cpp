@@ -1,32 +1,13 @@
-#include <Spider/spiderwidget.h>
-#include <Spider/spider.h>
 #include <QApplication>
 
 #include <QDebug>
-
 #include <QString>
-
+#include "QtCreatorQuickStart/mydrawing.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-// #if 0
-//     SpiderWidget w;
-// #else
-//     Spider spider;
-//     if(!spider.Initialize())
-//     {
-//         qDebug() << "Initialize failed.\n";
-//         return 0;
-//     }
-//     spider.Request();
-// #endif
-
-    Spider spider;
-    spider.getMessageWithRE(spider.tempGetHtml());
-
-
-
-
+    MyDrawing w;
+    w.show();
 
     return a.exec();
 }

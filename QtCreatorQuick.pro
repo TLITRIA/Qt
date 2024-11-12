@@ -17,6 +17,7 @@ SOURCES += \
     QtCreatorQuickStart/mycontainers.cpp \
     QtCreatorQuickStart/mydialog.cpp \
     QtCreatorQuickStart/mydragdrop.cpp \
+    QtCreatorQuickStart/mydrawing.cpp \
     QtCreatorQuickStart/myevent.cpp \
     QtCreatorQuickStart/myeventfilter.cpp \
     QtCreatorQuickStart/myfile.cpp \
@@ -47,6 +48,7 @@ HEADERS += \
     QtCreatorQuickStart/mycontainers.h \
     QtCreatorQuickStart/mydialog.h \
     QtCreatorQuickStart/mydragdrop.h \
+    QtCreatorQuickStart/mydrawing.h \
     QtCreatorQuickStart/myevent.h \
     QtCreatorQuickStart/myeventfilter.h \
     QtCreatorQuickStart/myfile.h \
@@ -73,6 +75,7 @@ FORMS += \
     QtCreatorQuickStart/mainwindow.ui \
     QtCreatorQuickStart/mydialog.ui \
     QtCreatorQuickStart/mydragdrop.ui \
+    QtCreatorQuickStart/mydrawing.ui \
     QtCreatorQuickStart/myevent.ui \
     QtCreatorQuickStart/myeventfilter.ui \
     QtCreatorQuickStart/mykeyevent.ui \

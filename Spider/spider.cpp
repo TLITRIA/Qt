@@ -4,7 +4,7 @@
 #include <qdebug.h>
 #include <QRegularExpression>
 #include <QTextDocument>
-#include <qtwEB>
+// #include <qtwEB>
 #include <QFile>
 Spider::Spider()
 : taskFinished(false)
