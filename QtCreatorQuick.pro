@@ -17,7 +17,9 @@ SOURCES += \
     QtCreatorQuickStart/mycontainers.cpp \
     QtCreatorQuickStart/mydialog.cpp \
     QtCreatorQuickStart/mydragdrop.cpp \
+    QtCreatorQuickStart/mydraw2.cpp \
     QtCreatorQuickStart/mydrawing.cpp \
+    QtCreatorQuickStart/mydrawing3.cpp \
     QtCreatorQuickStart/myevent.cpp \
     QtCreatorQuickStart/myeventfilter.cpp \
     QtCreatorQuickStart/myfile.cpp \
@@ -32,6 +34,7 @@ SOURCES += \
     QtCreatorQuickStart/mystring.cpp \
     QtCreatorQuickStart/mysyntaxhighlighter.cpp \
     QtCreatorQuickStart/mytimerevent.cpp \
+    QtCreatorQuickStart/mytransformation.cpp \
     QtCreatorQuickStart/myvariant.cpp \
     QtCreatorQuickStart/mywebengine.cpp \
     Spider/spider.cpp \
@@ -48,7 +51,9 @@ HEADERS += \
     QtCreatorQuickStart/mycontainers.h \
     QtCreatorQuickStart/mydialog.h \
     QtCreatorQuickStart/mydragdrop.h \
+    QtCreatorQuickStart/mydraw2.h \
     QtCreatorQuickStart/mydrawing.h \
+    QtCreatorQuickStart/mydrawing3.h \
     QtCreatorQuickStart/myevent.h \
     QtCreatorQuickStart/myeventfilter.h \
     QtCreatorQuickStart/myfile.h \
@@ -63,6 +68,7 @@ HEADERS += \
     QtCreatorQuickStart/mystring.h \
     QtCreatorQuickStart/mysyntaxhighlighter.h \
     QtCreatorQuickStart/mytimerevent.h \
+    QtCreatorQuickStart/mytransformation.h \
     QtCreatorQuickStart/myvariant.h \
     QtCreatorQuickStart/mywebengine.h \
     Spider/spider.h \
@@ -75,7 +81,9 @@ FORMS += \
     QtCreatorQuickStart/mainwindow.ui \
     QtCreatorQuickStart/mydialog.ui \
     QtCreatorQuickStart/mydragdrop.ui \
+    QtCreatorQuickStart/mydraw2.ui \
     QtCreatorQuickStart/mydrawing.ui \
+    QtCreatorQuickStart/mydrawing3.ui \
     QtCreatorQuickStart/myevent.ui \
     QtCreatorQuickStart/myeventfilter.ui \
     QtCreatorQuickStart/mykeyevent.ui \
@@ -85,6 +93,7 @@ FORMS += \
     QtCreatorQuickStart/mysignalslot.ui \
     QtCreatorQuickStart/mysignalslot2.ui \
     QtCreatorQuickStart/mytimerevent.ui \
+    QtCreatorQuickStart/mytransformation.ui \
     QtCreatorQuickStart/mywebengine.ui \
     Spider/spiderwidget.ui \
 
