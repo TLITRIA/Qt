@@ -6,10 +6,12 @@
 #include "QtCreatorQuickStart/mytransformation.h"
 #include "QtCreatorQuickStart/mydraw2.h"
 #include "QtCreatorQuickStart/mydrawing3.h"
+#include "QtCreatorQuickStart/mycomposition.h"
+#include "QtCreatorQuickStart/mydoublebuffers.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MyDrawing3 w;
+    MyDoubleBuffers w;
     w.show();
 
     return a.exec();

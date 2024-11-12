@@ -5,7 +5,11 @@
 #include <QImage>
 #include <QPixmap>
 #include <QBitMap>
-#include <QPicture>>
+#include <QPicture>
+
+#include <QLabel>
+#include <QWindow>
+#include <QScreen>
 
 
 MyDrawing3::MyDrawing3(QWidget *parent)
@@ -13,6 +17,18 @@ MyDrawing3::MyDrawing3(QWidget *parent)
     , ui(new Ui::MyDrawing3)
 {
     ui->setupUi(this);
+#if 0
+    // 截图
+    QWindow window;
+    QPixmap grab =  window.screen()->grabWindow();
+    grab.save("../QtCreatorQuickStart/mydrawing/screen.png");
+    QLabel *label = new QLabel(this);
+    label->resize(400, 200);
+    QPixmap pix = grab.scaled(label->size(), Qt::KeepAspectRatio,
+                              Qt::SmoothTransformation);
+    label->setPixmap(pix);
+    label->move(0, 100);
+#endif
 }
 
 MyDrawing3::~MyDrawing3()
@@ -71,9 +87,9 @@ void MyDrawing3::paintEvent(QPaintEvent *event)
     painter.drawPicture(200, 170, picture);
 #endif
 
-
+#if 0
     QImage image;
-    image.load("D:/Documents/QtCreatorQuick/QtCreatorQuickStart/image.png");
+    image.load("../QtCreatorQuickStart/myimages/image.png");
     qDebug() << image.size() << image.format() << image.depth();
 
     painter.drawImage(QPoint(10, 10), image);
@@ -81,5 +97,28 @@ void MyDrawing3::paintEvent(QPaintEvent *event)
     QTransform transform;
     transform.shear(0.2, 0);
     QImage image2 = mirror.transformed(transform);
-    image2.save("../mirror.png");
+    image2.save("../QtCreatorQuickStart/mydrawing/mirror.png");
+#endif
+#if 0
+    QPixmap pix;
+    pix.load("../QtCreatorQuickStart/mydrawing/yafeilinux.png");
+    painter.drawPixmap(0, 0, pix.width(), pix.height(), pix);
+    painter.setBrush(QColor(255, 255, 255, 100));
+    painter.drawRect(0, 0, pix.width(), pix.height());
+    painter.drawPixmap(100, 0, pix.width(), pix.height(), pix);
+    painter.setBrush(QColor(0, 0, 255, 100));
+    painter.drawRect(100, 0, pix.width(), pix.height());
+#endif
+
+#if 0 // QPicture
+    QPicture picture;
+    painter.begin(&picture);
+    painter.drawEllipse(10, 20, 80, 70);
+    painter.end();
+    picture.save("../QtCreatorQuickStart/mydrawing/drawing.pic");
+#else
+    QPicture picture;
+    qDebug() << picture.load("../QtCreatorQuickStart/mydrawing/drawing.pic");
+    painter.drawPicture(0, 0, picture);
+#endif
 }

@@ -14,8 +14,10 @@ SOURCES += \
     QtCreatorQuickStart/mainwindow.cpp \
     QtCreatorQuickStart/mybutton.cpp \
     QtCreatorQuickStart/myclass.cpp \
+    QtCreatorQuickStart/mycomposition.cpp \
     QtCreatorQuickStart/mycontainers.cpp \
     QtCreatorQuickStart/mydialog.cpp \
+    QtCreatorQuickStart/mydoublebuffers.cpp \
     QtCreatorQuickStart/mydragdrop.cpp \
     QtCreatorQuickStart/mydraw2.cpp \
     QtCreatorQuickStart/mydrawing.cpp \
@@ -48,8 +50,10 @@ HEADERS += \
     QtCreatorQuickStart/mainwindow.h \
     QtCreatorQuickStart/mybutton.h \
     QtCreatorQuickStart/myclass.h \
+    QtCreatorQuickStart/mycomposition.h \
     QtCreatorQuickStart/mycontainers.h \
     QtCreatorQuickStart/mydialog.h \
+    QtCreatorQuickStart/mydoublebuffers.h \
     QtCreatorQuickStart/mydragdrop.h \
     QtCreatorQuickStart/mydraw2.h \
     QtCreatorQuickStart/mydrawing.h \
@@ -79,7 +83,9 @@ FORMS += \
     QtCreatorQuickStart/futext.ui \
     QtCreatorQuickStart/imagedragdrop.ui \
     QtCreatorQuickStart/mainwindow.ui \
+    QtCreatorQuickStart/mycomposition.ui \
     QtCreatorQuickStart/mydialog.ui \
+    QtCreatorQuickStart/mydoublebuffers.ui \
     QtCreatorQuickStart/mydragdrop.ui \
     QtCreatorQuickStart/mydraw2.ui \
     QtCreatorQuickStart/mydrawing.ui \
