@@ -1,4 +1,4 @@
-QT       += core gui core5compat network
+QT       += core gui core5compat network opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,6 +29,7 @@ SOURCES += \
     QtCreatorQuickStart/mylineedit.cpp \
     QtCreatorQuickStart/mymouseevent.cpp \
     QtCreatorQuickStart/myownership.cpp \
+    QtCreatorQuickStart/myprocess.cpp \
     QtCreatorQuickStart/myproperty.cpp \
     QtCreatorQuickStart/myre.cpp \
     QtCreatorQuickStart/mysignalslot.cpp \
@@ -41,7 +42,7 @@ SOURCES += \
     QtCreatorQuickStart/mywebengine.cpp \
     Spider/spider.cpp \
     Spider/spiderwidget.cpp \
-    main.cpp \
+    main.cpp
 
 
 HEADERS += \
@@ -65,6 +66,7 @@ HEADERS += \
     QtCreatorQuickStart/mylineedit.h \
     QtCreatorQuickStart/mymouseevent.h \
     QtCreatorQuickStart/myownership.h \
+    QtCreatorQuickStart/myprocess.h \
     QtCreatorQuickStart/myproperty.h \
     QtCreatorQuickStart/myre.h \
     QtCreatorQuickStart/mysignalslot.h \
@@ -76,7 +78,7 @@ HEADERS += \
     QtCreatorQuickStart/myvariant.h \
     QtCreatorQuickStart/mywebengine.h \
     Spider/spider.h \
-    Spider/spiderwidget.h \
+    Spider/spiderwidget.h
 
 
 FORMS += \
@@ -95,6 +97,7 @@ FORMS += \
     QtCreatorQuickStart/mykeyevent.ui \
     QtCreatorQuickStart/mymouseevent.ui \
     QtCreatorQuickStart/myownership.ui \
+    QtCreatorQuickStart/myprocess.ui \
     QtCreatorQuickStart/myproperty.ui \
     QtCreatorQuickStart/mysignalslot.ui \
     QtCreatorQuickStart/mysignalslot2.ui \
