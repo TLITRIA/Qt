@@ -25,6 +25,7 @@ SOURCES += \
     QtCreatorQuickStart/myevent.cpp \
     QtCreatorQuickStart/myeventfilter.cpp \
     QtCreatorQuickStart/myfile.cpp \
+    QtCreatorQuickStart/myipc.cpp \
     QtCreatorQuickStart/mykeyevent.cpp \
     QtCreatorQuickStart/mylineedit.cpp \
     QtCreatorQuickStart/mymouseevent.cpp \
@@ -62,6 +63,7 @@ HEADERS += \
     QtCreatorQuickStart/myevent.h \
     QtCreatorQuickStart/myeventfilter.h \
     QtCreatorQuickStart/myfile.h \
+    QtCreatorQuickStart/myipc.h \
     QtCreatorQuickStart/mykeyevent.h \
     QtCreatorQuickStart/mylineedit.h \
     QtCreatorQuickStart/mymouseevent.h \
@@ -94,6 +96,7 @@ FORMS += \
     QtCreatorQuickStart/mydrawing3.ui \
     QtCreatorQuickStart/myevent.ui \
     QtCreatorQuickStart/myeventfilter.ui \
+    QtCreatorQuickStart/myipc.ui \
     QtCreatorQuickStart/mykeyevent.ui \
     QtCreatorQuickStart/mymouseevent.ui \
     QtCreatorQuickStart/myownership.ui \
