@@ -1,4 +1,4 @@
-QT       += core gui core5compat network opengl
+QT       += core gui core5compat network opengl sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    QtCreatorQuickStart/databasedriver.cpp \
     QtCreatorQuickStart/futext.cpp \
     QtCreatorQuickStart/imagedragdrop.cpp \
     QtCreatorQuickStart/mainwindow.cpp \
@@ -47,6 +48,7 @@ SOURCES += \
 
 
 HEADERS += \
+    QtCreatorQuickStart/databasedriver.h \
     QtCreatorQuickStart/futext.h \
     QtCreatorQuickStart/imagedragdrop.h \
     QtCreatorQuickStart/mainwindow.h \
@@ -115,8 +117,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    QtCreatorQuickStart/myimages.qrc \
-    myimages.qrc
+    QtCreatorQuickStart/myimages.qrc
 
 DISTFILES += \
     .gitignore \

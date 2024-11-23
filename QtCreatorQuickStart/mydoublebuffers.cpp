@@ -2,7 +2,7 @@
 #include "ui_mydoublebuffers.h"
 
 #include <QMouseEvent>
-#include <QPainter>>
+#include <QPainter>
 
 MyDoubleBuffers::MyDoubleBuffers(QWidget *parent)
     : QWidget(parent)
