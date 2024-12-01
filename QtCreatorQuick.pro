@@ -34,6 +34,7 @@ SOURCES += \
     QtCreatorQuickStart/myprocess.cpp \
     QtCreatorQuickStart/myproperty.cpp \
     QtCreatorQuickStart/myre.cpp \
+    QtCreatorQuickStart/mysence.cpp \
     QtCreatorQuickStart/mysignalslot.cpp \
     QtCreatorQuickStart/mysignalslot2.cpp \
     QtCreatorQuickStart/mystring.cpp \
@@ -73,6 +74,7 @@ HEADERS += \
     QtCreatorQuickStart/myprocess.h \
     QtCreatorQuickStart/myproperty.h \
     QtCreatorQuickStart/myre.h \
+    QtCreatorQuickStart/mysence.h \
     QtCreatorQuickStart/mysignalslot.h \
     QtCreatorQuickStart/mysignalslot2.h \
     QtCreatorQuickStart/mystring.h \
@@ -121,4 +123,5 @@ RESOURCES += \
 
 DISTFILES += \
     .gitignore \
+    QXlsx.pri \
     README.md

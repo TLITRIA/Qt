@@ -1,15 +1,11 @@
 #include <QApplication>
+#include "./QtCreatorQuickStart/mysence.h"
 
-#include <QDebug>
-#include <QString>
-#include <QtCreatorQuickStart/databasedriver.h>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    DatabaseDriver w;
-    w.InitDB("", "", "");
-    if(!w.openDB())
-        qDebug() << w.getDBErrorStr();
 
+    MySence s;
     return a.exec();
 }
